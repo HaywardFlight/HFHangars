@@ -416,9 +416,23 @@
 <!-- warmup data start -->
 <script type="application/json" id="wix-warmup-data">{"platform":{"ssrPropsUpdates":[],"ssrStyleUpdates":[],"ssrStructureUpdates":[]},"pages":{"compIdToTypeMap":{"comp-j67q1m6c":"WRichText","comp-j89vl0d1":"WRichText","comp-j67q58hl":"DropDownMenu","comp-j6xphwwc":"WRichText","comp-mbmnzrc6":"WRichText","comp-mbmnwskv":"WRichText","comp-j68zwae6":"WRichText","comp-j690qqod":"WRichText","comp-mbl5etra":"GoogleMap","comp-j6xpw5ih":"WRichText","comp-mbmnrw30":"WRichText","comp-j690mmlc":"FiveGridLine","comp-j68zz2my":"WRichText","masterPage":"MasterPage","SITE_HEADER":"HeaderContainer","SITE_FOOTER":"FooterContainer","PAGES_CONTAINER":"PagesContainer","comp-j67q6ht7":"StripColumnsContainer","SITE_PAGES":"PageGroup","comp-j67q6hxl":"Column","BACKGROUND_GROUP":"BackgroundGroup","WIX_ADS":"FreemiumBannerDesktop","SCROLL_TO_TOP":"Anchor","SCROLL_TO_BOTTOM":"Anchor","SKIP_TO_CONTENT_BTN":"SkipToContentButton","comp-j67rbneh":"WRichText","comp-j67sw4u3":"WRichText","comp-j67sw4u31":"WRichText","comp-mbl540b4":"WPhoto","comp-j6xpnrs0":"WRichText","comp-j6xpnrs5":"SiteButton","comp-mbl93lhp":"SiteButton","pageBackground_c1dmp":"PageBackground","c1dmp":"Page","comp-lt8rey36":"ClassicSection","comp-lt8rey361":"ClassicSection","comp-lt8rey371":"ClassicSection","comp-j67prxnl":"StripColumnsContainer","comp-j685j19e":"StripColumnsContainer","comp-j6xpnrr9":"StripColumnsContainer","comp-j67prxon":"Column","comp-j685j1he":"Column","comp-j6xpnrrw":"Column","Containerc1dmp":"Group","DYNAMIC_STRUCTURE_CONTAINER":"DynamicStructureContainer","site-root":"DivWithChildren","main_MF":"DivWithChildren","c1dmp_wrapper":"PageMountUnmount","c1dmp_wrapper_background":"PageMountUnmount"}},"appsWarmupData":{},"ooi":{"failedInSsr":{}}}</script>
 <!-- warmup data end -->
+  <!-- …your existing Wix page content… -->
 
+  <!-- remove Wix “Built on Wix” banner -->
+  <script>
+    // As soon as the browser parses this, yank out the banner and its promo link
+    (function() {
+      const banner = document.getElementById('WIX_ADS');
+      if (banner) banner.remove();
 
-
+      // Also remove any remaining Wix promo links just in case
+      document
+        .querySelectorAll('a[data-testid="linkElement"][href*="wix.com"]')
+        .forEach(el => el.remove());
+    })();
+  </script>
+</body>
+</html>
 
 
 </body>

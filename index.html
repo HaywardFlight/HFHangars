@@ -84,16 +84,19 @@
 
   /* 4) Turn the hero-overlay map into a block below the hero */
 /* 4) Hero‐overlay map – now positioned relative in the flow */
+/* Hero-overlay map: responsive sizing */
 .map-hero-overlay {
-  position: relative;       /* no more absolute offsets */
-  width: 380px;             /* keep your desired size */
-  height: 280px;
-  margin: 20px auto;        /* center horizontally, add vertical spacing */
+  position: relative;  
+  /* never exceed 380px, but shrink down to 80% of its parent if the screen is narrower */
+  width: min(380px, 80%);  
+  /* maintain the 380×280 aspect ratio automatically */
+  aspect-ratio: 380 / 280;  
+  margin: 20px auto;      /* vertical spacing + horizontal centering */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  /* remove bottom, right, z-index */
 }
+
 .map-hero-overlay iframe {
   width: 100%;
   height: 100%;

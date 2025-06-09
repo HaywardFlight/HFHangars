@@ -24,10 +24,11 @@
     }
   
     /* round the hero background container */
-    #BACKGROUND_GROUP {
-      border-radius: 25px;
-      overflow: hidden;
-    }
+#BACKGROUND_GROUP {
+	position: relative;
+	border-radius: 25px;
+	overflow: hidden;
+}
   
     /* footer Google Map base styling */
     #site-footer {
@@ -87,15 +88,20 @@
 /* Hero-overlay map: responsive sizing */
 /* Hero-overlay map: responsive sizing */
 .map-hero-overlay {
-  position: relative;  
-  /* never exceed 380px, but shrink down to 80% of its parent if the screen is narrower */
-  width: min(380px, 80%);  
-  /* maintain the 380×280 aspect ratio automatically */
-  aspect-ratio: 380 / 280;  
-  margin: 20px auto;      /* vertical spacing + horizontal centering */
+  position: absolute;
+  /* place it at about 75% across and 70% down from the top */
+  top: 70%;
+  left: 75%;
+  /* center the map around those percentages */
+  transform: translate(-50%, -50%);
+  /* width clamps between 200px and 380px, but is 25% of container otherwise */
+  width: clamp(200px, 25%, 380px);
+  /* auto height via aspect-ratio */
+  aspect-ratio: 380 / 280;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 5;  
 }
 
 .map-hero-overlay iframe {

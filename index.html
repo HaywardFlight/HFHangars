@@ -311,6 +311,94 @@
 #c1dmp{width:auto;min-height:40px;}#pageBackground_c1dmp{--bg-position:absolute;--fill-layer-background-overlay-color:transparent;--fill-layer-background-overlay-position:absolute;--bg-overlay-color:rgb(var(--color_11));--bg-gradient:none;}#comp-lt8rey36{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-j67prxnl{--bg-overlay-color:transparent;--bg-gradient:none;--padding:0px;--margin:0px;min-width:980px;--firstChildMarginTop:-1px;--lastChildMarginBottom:-1px;--items-direction:row;}#comp-j67prxon{--fill-layer-image-opacity:1;--bg-overlay-color:rgb(var(--color_37));--bg-gradient:none;width:100%;--column-width:980px;--column-flex:980;}#comp-j67rbneh{--min-height:240px;direction:var(--wix-opt-in-direction);}#comp-lt8rey361{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-j685j19e{--bg-overlay-color:transparent;--bg-gradient:none;--padding:0px;--margin:0px;min-width:980px;--firstChildMarginTop:-1px;--lastChildMarginBottom:-1px;--items-direction:row;}#comp-j685j1he{--bg-overlay-color:rgb(var(--color_38));--bg-gradient:none;width:100%;--column-width:980px;--column-flex:980;}#comp-j67sw4u3{direction:var(--wix-opt-in-direction);}#comp-j67sw4u31{direction:var(--wix-opt-in-direction);}#comp-mbl540b4{--height:298px;--width:721px;}#comp-lt8rey371{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-j6xpnrr9{--bg-overlay-color:transparent;--bg-gradient:none;--padding:0px;--margin:0px;min-width:980px;--firstChildMarginTop:-1px;--lastChildMarginBottom:-1px;--items-direction:row;}#comp-j6xpnrrw{--bg-overlay-color:rgb(var(--color_40));--bg-gradient:none;width:100%;--column-width:980px;--column-flex:980;}#comp-j6xpnrs0{direction:var(--wix-opt-in-direction);}#comp-j6xpnrs5{--shc-mutated-brightness:128,128,128;--margin-start:0px;--margin-end:0px;--fnt:normal normal normal 15px/1.4em avenir-lt-w01_35-light1475496,sans-serif;direction:var(--wix-opt-in-direction, ltr);--label-align:center;--label-text-align:center;}#comp-mbl93lhp{--shc-mutated-brightness:128,128,128;--margin-start:0px;--margin-end:0px;--fnt:normal normal normal 15px/1.4em avenir-lt-w01_35-light1475496,sans-serif;direction:var(--wix-opt-in-direction, ltr);--label-align:center;--label-text-align:center;}</style>
 
 <script src="config.js"></script>
+<style>
+  /* make the root container truly fluid */
+  html, body, 
+  #SITE_CONTAINER, /* the outer Wix wrapper */
+  #site-root       /* the inner fixed-width wrapper */
+  {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+</style>
+@media (max-width: 767px) {
+  /* 1) Make the site full-width and remove extra side padding */
+  body, 
+  #BACKGROUND_GROUP, 
+  #site-footer .map-container {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 12px !important;
+    box-sizing: border-box;
+  }
+
+  /* 2) Stack any two-column areas vertically */
+  .layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* 3) Center & shrink the tagline */
+  .trust-tagline {
+    top: 15% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    font-size: 1.8rem !important;
+  }
+
+  /* 4) Turn the hero-overlay map into a block below the hero */
+/* 4) Hero‐overlay map – now positioned relative in the flow */
+/* Hero-overlay map: responsive sizing */
+/* Hero-overlay map: responsive sizing */
+.map-hero-overlay {
+  position: absolute;
+  /* place it at about 75% across and 70% down from the top */
+  top: 70%;
+  left: 75%;
+  /* center the map around those percentages */
+  transform: translate(-50%, -50%);
+  /* width clamps between 200px and 380px, but is 25% of container otherwise */
+  width: clamp(200px, 25%, 380px);
+  /* auto height via aspect-ratio */
+  aspect-ratio: 380 / 280;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 5;  
+}
+
+.map-hero-overlay iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+  /* 5) Stack footer map and address, center them */
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+  }
+  .footer-content > * {
+    width: 100%;
+    max-width: none !important;
+  }
+
+  /* 6) Tweak base font sizes */
+  body {
+    font-size: 0.95rem !important;
+  }
+  #site-footer h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 12px !important;
+  }
+}
+
 </head>
 <body class='' >
 <script type="text/javascript">

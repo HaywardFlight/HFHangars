@@ -2,9 +2,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- 1. Charset & viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HF Hangars</title>
+
+  <!-- 2. Primary SEO meta tags -->
+  <title>Home | HF Hangars</title>
+  <meta name="description" content="Welcome to HF Hangars, where we provide secure and reliable storage, routine maintenance services, and top-notch service for your aircraft.">
+  <meta name="keywords" content="aircraft storage, hangar rental, Hayward CA, private hangars">
+  <link rel="canonical" href="https://www.hfhangars.com/">
+
+  <!-- 3. Open Graph tags -->
+  <meta property="og:title" content="Home | HF Hangars">
+  <meta property="og:description" content="Welcome to HF Hangars, where we provide secure and reliable storage, routine maintenance services, and top-notch service for your aircraft.">
+  <meta property="og:url" content="https://www.hfhangars.com/">
+  <meta property="og:image" content="https://www.hfhangars.com/assets/images/og-image.jpg">
+  <meta property="og:type" content="website">
+
+  $1
+
+  <!-- 5. JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HF Hangars",
+    "url": "https://www.hfhangars.com",
+    "logo": "https://www.hfhangars.com/assets/images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/YourPage",
+      "https://twitter.com/YourProfile"
+    ]
+  }
+  </script>
+
+  $3
   <style>
     /* Fluid Typography */
     :root { font-size: clamp(0.875rem, 1.5vw, 1.125rem); }
@@ -88,7 +120,7 @@
       font-size: clamp(1rem, 2vw, 1.125rem);
     }
 
-    /* Footer aligned with CTA */
+    /* Footer */
     .footer-dark {
       background: #000;
       margin: 0 clamp(1rem, 5vw, 2rem);
@@ -99,7 +131,7 @@
       grid-template-columns: 1fr 1.5fr;
       gap: clamp(1rem, 3vw, 2rem);
       align-items: start;
-      padding-bottom: clamp(1rem, 2vw, 1.5rem); /* Reduced gap */
+      padding-bottom: clamp(1rem, 2vw, 1.5rem);
       width: 80%;
       margin: 0 auto;
     }
@@ -107,12 +139,7 @@
     .footer-contact .contact-info p { color: #fff; margin: 0.25rem 0; font-size: clamp(0.875rem, 1.5vw, 1rem); }
     .footer-contact .map-container { border-radius: 12px; overflow: hidden; height: clamp(200px, 30vh, 300px); }
     .footer-contact .map-container iframe { width: 100%; height: 100%; border: 0; }
-    .footer-info {
-      width: 80%;
-      margin: 0 auto;
-      text-align: left;
-      margin-top: 0; /* Remove extra space */
-    }
+    .footer-info { width: 80%; margin: 0 auto; text-align: left; margin-top: 0; }
     .footer-info h3, .footer-info p { color: #fff; margin: 0.5rem 0; }
     .footer-dark hr { border: none; border-top: 1px solid #444; margin: 0 auto; width: 80%; }
     .footer-dark small { display: block; margin-top: 1rem; color: #fff; text-align: center; font-size: clamp(0.75rem, 1.5vw, 0.9rem); }
@@ -142,6 +169,7 @@
     <div class="header-phone">(925) 575-1172</div>
   </header>
 
+  <!-- rest of body unchanged -->
   <section class="hero">
     <div class="hero-text">A Hangar That You Can Trust</div>
   </section>

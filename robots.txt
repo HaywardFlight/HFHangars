@@ -1,6 +1,9 @@
 # robots.txt for https://www.hfhangars.com/
 
 User-agent: *
-Allow: /
+Disallow:
+
+# Optional: slow down very low-powered hosts
+# Crawl-delay: 10
 
 Sitemap: https://www.hfhangars.com/sitemap.xml

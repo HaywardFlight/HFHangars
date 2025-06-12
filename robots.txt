@@ -1,3 +1,6 @@
+# robots.txt for https://www.hfhangars.com/
+
 User-agent: *
 Allow: /
+
 Sitemap: https://www.hfhangars.com/sitemap.xml

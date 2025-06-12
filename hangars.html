@@ -1,205 +1,190 @@
+<!-- hangars-clean.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>HF Hangars | hangar available</title>
-    <meta
-      name="description"
-      content="Welcome to HF Hangars, where we provide secure and reliable aircraft storage and professional maintenance services. Our hangar is the perfect place for you to protect and maintain your valuable aircraft. We offer competitive rates and ensure top-notch service for all your aircraft needs.Hangar space available"
-    />
-    <meta property="og:title" content="HF Hangars | hangar available" />
-    <meta
-      property="og:description"
-      content="Welcome to HF Hangars, where we provide secure and reliable aircraft storage and professional maintenance services. Our hangar is the perfect place for you to protect and maintain your valuable aircraft. We offer competitive rates and ensure top-notch service for all your aircraft needs.Hangar space available"
-    />
-    <meta property="og:site_name" content="HF Hangars" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="HF Hangars | hangar available" />
-    <meta
-      name="twitter:description"
-      content="Welcome to HF Hangars, where we provide secure and reliable aircraft storage and professional maintenance services. Our hangar is the perfect place for you to protect and maintain your valuable aircraft. We offer competitive rates and ensure top-notch service for all your aircraft needs.Hangar space available"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reseter.css@2.0.0/css/reseter.min.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <header class="navbar">
-      <section class="navbar-brand">
-        <a href="./">
-          <h1>HF Hangers</h1>
-          <p>Private Aircraft Hangars</p>
-        </a>
-      </section>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <ul class="navbar-links">
-        <li><a href="./">Home</a></li>
-        <li><a href="#">Hangars Information</a></li>
-        <li><a href="./contact.html">Contact Us</a></li>
-      </ul>
-      <a class="navbar-cta" href="tel:9255741172">(925) 575-1172</a>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HF Hangars | Hangar Information</title>
+  <style>
+    /* Reset & Global */
+    :root { font-size: clamp(0.875rem, 1.5vw, 1.125rem); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background: #fff; }
+    a { text-decoration: none; color: inherit; }
 
-    <section class="hangar-info">
-      <h2>Hangar Information</h2>
-    </section>
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: clamp(0.5rem, 2vw, 1.5rem) clamp(1rem, 5vw, 2rem);
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo-group { display: flex; flex-direction: column; align-items: flex-start; }
+    .logo {
+      text-transform: uppercase;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: bold;
+      /* match index.html font */
+      font-family: Arial, sans-serif;
+    }
+    .subtitle { font-size: clamp(0.75rem, 2vw, 0.9rem); color: #666; }
+    nav ul { display: flex; gap: clamp(1rem, 3vw, 2rem); list-style: none; margin: 0; padding: 0; }
+    nav li a { font-size: clamp(1rem, 2vw, 1.25rem); color: #333; }
+    nav li a.active, nav li a:hover { color: #f15a24; }
+    .header-phone { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: bold; color: #000; }
 
-    <section class="section-hangar-1">
-      <h2>The Hangar</h2>
-      <p>
-        Our hangar offers secure and convenient parking for various aircraft,
-        including single and twin engine models, as well as jets. Located in
-        Hayward, California, our facility provides a safe and reliable space for
-        aircraft owners to store their planes. We prioritize the security and
-        safety of your aircraft and have implemented comprehensive measures to
-        the hangar and its surroundings.
-      </p>
-      <p>
-        Our hangar is open 24 hours a day, 7 days a week, ensuring that we are
-        always available to meet your needs. However, to provide you with the
-        best service possible, we request a 24-hour notice via phone or email
-        before your flight. This allows us ample time to prepare and ensure
-        everything is ready for you.
-      </p>
-      <h3>What we offer​</h3>
+    /* Hero */
+    .hero { width: 80%; margin: 1rem auto; background: url('https://static.wixstatic.com/media/6468c9_9ab8a24317d64b88af4c674d4136d24c~mv2.jpg') center/cover no-repeat; border-radius: 20px; height: 50vh; min-height: 300px; display: flex; align-items: flex-start; justify-content: center; padding-top: 2rem; }
+    .hero-text { background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: clamp(1.5rem,4vw,2.5rem); text-transform: uppercase; }
+
+    /* Main */
+    main { max-width: 70%; margin: 2rem 0 0 15%; padding: 0 1rem; }
+    .main-heading { font-size: 38px; font-weight: bold; margin-bottom: 1rem; }
+    .main-text { font-size: clamp(1rem,2.5vw,1.125rem); margin-bottom: 1rem; }
+    .sub-heading { font-size: clamp(1.5rem,2.5vw,2rem); font-weight: bold; margin: 2rem 0 1rem; text-transform: uppercase; }
+    .offer-list { list-style: disc inside; margin-bottom: 0; padding-left: 1rem; }
+    .offer-list li { margin-bottom: 0.5rem; }
+
+    /* Included Services */
+    .included-services { background: #eee; padding: 4rem 1rem; text-align: center; margin-top: 2rem; }
+    .included-services .section-heading { font-size: clamp(2rem,4vw,3rem); font-weight: bold; margin-bottom: 2rem; text-transform: uppercase; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+    .service-item img { width: clamp(150px,25vw,300px); height: clamp(150px,25vw,300px); border-radius: 50%; object-fit: cover; margin-bottom: 1rem; }
+    .service-title { font-weight: bold; margin-bottom: 0.5rem; }
+    .service-desc { font-size: clamp(0.875rem,2vw,1rem); max-width: 300px; margin: 0 auto; }
+
+    /* CTA */
+    .cta-section { padding: 2rem 1rem; text-align: center; }
+    .cta-text { font-size: clamp(1rem,2vw,1.25rem); font-weight: bold; margin-bottom: 1rem; line-height: 1.4; }
+    .cta-text br { display: block; margin-bottom: 0.5rem; }
+    .cta-button { background: #000; color: #fff; padding: 0.75rem 1.5rem; text-transform: uppercase; font-size: clamp(0.875rem,2vw,1rem); border: none; cursor: pointer; }
+
+        /* Footer aligned with CTA */
+    .footer-dark {
+      background: #000;
+      margin: 0 clamp(1rem, 5vw, 2rem);
+      padding: clamp(2rem, 5vw, 4rem) 0;
+    }
+    .footer-contact {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: clamp(1rem, 3vw, 2rem);
+      align-items: start;
+      padding-bottom: clamp(1rem, 2vw, 1.5rem);
+      width: 80%;
+      margin: 0 auto;
+    }
+    .footer-contact .contact-info h3 { color: #fff; font-size: clamp(1.25rem, 3vw, 1.5rem); margin-bottom: 0.5rem; }
+    .footer-contact .contact-info p { color: #fff; margin: 0.25rem 0; font-size: clamp(0.875rem, 1.5vw, 1rem); }
+    .footer-contact .map-container { border-radius: 12px; overflow: hidden; height: clamp(200px, 30vh, 300px); }
+    .footer-contact .map-container iframe { width: 100%; height: 100%; border: 0; }
+    .footer-info {
+      width: 80%;
+      margin: 0 auto;
+      text-align: left;
+      margin-top: 0;
+    }
+    .footer-info h3, .footer-info p { color: #fff; margin: 0.5rem 0; }
+    .footer-dark hr { border: none; border-top: 1px solid #444; margin: 0 auto; width: 80%; }
+    .footer-dark small { display: block; margin-top: 1rem; color: #fff; text-align: center; font-size: clamp(0.75rem, 1.5vw, 0.9rem); }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: center; text-align: center; }
+      nav ul { justify-content: center; }
+      .hero { height: 60vh; }
+      .footer-contact { grid-template-columns: 1fr; }
+      .footer-info { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-group">
+      <div class="logo">HF Hangars</div>
+      <div class="subtitle">Private Aircraft Hangars</div>
+    </div>
+    <nav>
       <ul>
-        <li>Lounge space</li>
-
-        <li>Complementary wifi</li>
-
-        <li>
-          Fire sprinklers, fire alarms and a fire extinguisher in each unit.
-        </li>
-
-        <li>Safe and secure storage for every aircraft</li>
-
-        <li>
-          Three-phase power available for everyone. A three-phase power outlet
-          may be installed in each unit.
-        </li>
-
-        <li>Restrooms available for tenants​</li>
-
-        <li>24-hour access via secure gate.</li>
-
-        <li>
-          Ample private parking in the driveway. Parking spaces inside the fence
-          available for rent
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hangar-information.html" class="active">Hangar Information</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
       </ul>
-    </section>
+    </nav>
+    <div class="header-phone">(925) 575-1172</div>
+  </header>
 
-    <section class="included-services">
-      <h2>INCLUDED SERVICES</h2>
-      <div class="services-list">
-        <div class="service">
-          <img
-            src="https://static.wixstatic.com/media/6468c9_951a9ed5a24b4150808a44c90ecf5567~mv2.jpg/v1/crop/x_102,y_0,w_408,h_408/fill/w_194,h_194,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/towed.jpgcepad=2&q=80"
-            alt="Towing"
-            class="service-img circle"
-          />
-          <h3>Towing</h3>
-          <p>
-            We want you to know that when choose our hangars, you're getting
-            top-notch towing services for your aircraft. Our skilled team will
-            expertly pull your aircraft out for an exciting day of flying and
-            ensure it’s returned safely to the hangar afterward. We will handle
-            every detail, so you can focus on enjoying your time in the air.
-          </p>
-        </div>
-        <div class="service">
-          <img
-            src="https://static.wixstatic.com/media/6468c9_a4c452aaaad145758e8c20621241e900~mv2.jpg/v1/fill/w_194,h_194,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bin.jpgcepad=2&q=80"
-            alt="Getting Ready"
-            class="service-img square"
-          />
-          <h3>Getting Ready</h3>
-          <p>
-            We know that preparing for a flight can be a hassle, especially when
-            it comes to managing your gear. That's why we provide lockers
-            specifically designed for your pre-flight items, such as oil or air
-            pumps. Store your equipment securely and have peace mind as you get
-            ready to take off.
-          </p>
-        </div>
-        <div class="service">
-          <img
-            src="https://static.wixstatic.com/media/6468c9_ed4dcf7fa7044f91bdbb2a9616b7cd08~mv2.webp/v1/fill/w_194,h_194,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/repair.webpcepad=2&q=80"
-            alt="Repair Shop"
-            class="service-img square"
-          />
-          <h3>Repair Shop</h3>
-          <p>
-            In the event that your plane requires a trip to the repair shop,
-            rest assured that we are here to help. We will efficiently transport
-            your plane to and from the repair shop across the airport, ensuring
-            a smooth process for you. Your aircraft's maintenance is our
-            priority, and we aim to minimize any inconvenience during this time.
-            Trust us to handle the logistics while you focus on your flying
-            experience.
-          </p>
-        </div>
+  <section class="hero">
+    <div class="hero-text">Hangar Information</div>
+  </section>
+
+  <main>
+    <h2 class="main-heading wixui-rich-text__text">The Hangar</h2>
+    <p class="main-text wixui-rich-text__text">Our hangar offers secure and convenient parking for various aircraft, including single and twin engine models, as well as jets. Located in Hayward, California, our facility provides a safe and reliable space for aircraft owners to store their planes. We prioritize the security and safety of your aircraft and have implemented comprehensive measures to the hangar and its surroundings.</p>
+    <p class="main-text wixui-rich-text__text">Our hangar is open 24 hours a day, 7 days a week, ensuring that we are always available to meet your needs. However, to provide you with the best service possible, we request a 24-hour notice via phone or email before your flight. This allows us ample time to prepare and ensure everything is ready for you.</p>
+
+    <h3 class="sub-heading wixui-rich-text__text">What We Offer</h3>
+    <ul class="offer-list wixui-rich-text__text">
+      <li>Lounge space</li>
+      <li>Complementary wifi</li>
+      <li>Fire sprinklers, fire alarms and a fire extinguisher in each unit.</li>
+      <li>Safe and secure storage for every aircraft</li>
+      <li>Three-phase power available for everyone. A three-phase power outlet may be installed in each unit.</li>
+      <li>Restrooms available for tenants</li>
+      <li>24-hour access via secure gate.</li>
+      <li>Ample private parking in the driveway. Parking spaces inside the fence available for rent</li>
+    </ul>
+  </main>
+
+  <section class="included-services wixui-rich-text__text">
+    <div class="section-heading">Included Services</div>
+    <div class="services-grid">
+      <div class="service-item">
+        <img src="https://static.wixstatic.com/media/6468c9_951a9ed5a24b4150808a44c90ecf5567~mv2.jpg" alt="Towing">
+        <div class="service-title">Towing</div>
+        <div class="service-desc">We want you to know that when you choose our hangars, you're getting top-notch towing services for your aircraft. Our skilled team will expertly pull your aircraft out for an exciting day of flying and ensure it’s returned safely to the hangar afterward. We will handle every detail, so you can focus on enjoying your time in the air.</div>
       </div>
-    </section>
+      <div class="service-item">
+        <img src="https://static.wixstatic.com/media/6468c9_a4c452aaaad145758e8c20621241e900~mv2.jpg" alt="Getting Ready">
+        <div class="service-title">Getting Ready</div>
+        <div class="service-desc">We know that preparing for a flight can be a hassle, especially when it comes to managing your gear. That's why we provide lockers specifically designed for your pre-flight items, such as oil or air pumps. Store your equipment securely and have peace of mind as you get ready to take off.</div>
+      </div>
+      <div class="service-item">
+        <img src="https://static.wixstatic.com/media/6468c9_ed4dcf7fa7044f91bdbb2a9616b7cd08~mv2.webp" alt="Repair Shop">
+        <div class="service-title">Repair Shop</div>
+        <div class="service-desc">In the event that your plane requires a trip to the repair shop, rest assured that we are here to help. We will efficiently transport your plane to and from the repair shop across the airport, ensuring a smooth process for you. Your aircraft's maintenance is our priority, and we aim to minimize any inconvenience during this time. Trust us to handle the logistics while you focus on your flying experience.</div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-      <section class="footer-1 footer-hangar" style="background: white">
-        <h2>
-          Like What you see?
-          <p style="text-transform: uppercase">
-            Learn more about our aircraft solutions.
-          </p>
-        </h2>
-        <div>
-          <button class="btn btn-primary" style="border-radius: 0">
-            <a href="/hangars" style="color: white !important"
-              >View Hangar Information</a
-            >
-          </button>
-        </div>
-      </section>
-      <section class="footer-2">
-        <div class="footer-2-left">
-          <section>
-            <h3>Contact Us</h3>
-            <p>Tel: (925) 575-1172 hfhangars@gmail.com</p>
-          </section>
-          <section>
-            <h3>Working Hours</h3>
-            <p>Monday - Sunday: 10am - 5pm</p>
-          </section>
-        </div>
-        <div class="footer-2-right">
-          <section class="google-maps">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6555.520335516855!2d-122.12157192413636!3d37.6610958187004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f91008630b533%3A0x4ee9be35c53e25d4!2sHF%20Hangars!5e1!3m2!1sen!2sus!4v1749343994012!5m2!1sen!2sus"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
-          </section>
-          <section>
-            <h3>Working Hours</h3>
-            <p>Monday - Sunday: 10am - 5pm</p>
-          </section>
-        </div>
-      </section>
-      <section class="footer-3">
-        <p>© 2024 HF Hangars</p>
-      </section>
-    </footer>
-    <script src="./script.js"></script>
-  </body>
+  <section class="cta-section wixui-rich-text__text">
+    <div class="cta-text">Like what you see?<br>Learn more about our aircraft solutions.</div>
+    <a href="contact-us.html" class="cta-button">Get in Touch</a>
+  </section>
+
+  <footer class="footer-dark">
+    <div class="footer-contact">
+      <div class="contact-info">
+        <h3>Contact us</h3>
+        <p>Tel: (925) 575-1172</p>
+        <p>hfhangars@gmail.com</p>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.7598506815843!2d-122.1189798!3d37.661103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f91048da9d93b%3A0x3f1357c528c8de12!2sHayward%20Flight%20LLC!5e1!3m2!1sen!2sus!4v1749495683138!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="footer-info">
+      <h3>HF Hangars</h3>
+      <p>20995 Skywest Dr,<br>Hayward, CA 94541</p>
+    </div>
+    <hr>
+    <small>&copy; 2025 HF Hangars. All rights reserved.</small>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="replace-urls.js"></script>
+</body>
 </html>

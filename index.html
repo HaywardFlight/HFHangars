@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,105 +21,205 @@
     "name": "HF Hangars",
     "url": "https://www.hfhangars.com",
     "logo": "https://www.hfhangars.com/assets/images/logo.png",
-    "sameAs": ["https://www.facebook.com/YourPage","https://twitter.com/YourProfile"]
+    "sameAs": [
+      "https://www.facebook.com/YourPage",
+      "https://twitter.com/YourProfile"
+    ]
   }
   </script>
-
   <style>
+    /* Reset & Base */
     :root { font-size: clamp(0.875rem, 1.5vw, 1.125rem); }
-    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
-    html, body { width:100%; overflow-x:hidden; }
-    body { font-family: Arial, sans-serif; line-height:1.6; color:#333; background:#fff; }
-    a { text-decoration:none; color:inherit; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; overflow-x: hidden; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #fff; }
+    a { text-decoration: none; color: inherit; }
 
     /* Header */
     header {
-      position: sticky; top:0; z-index:1000;
-      display:flex; justify-content: space-around; align-items:center;
-      padding:clamp(0.5rem,2vw,1.5rem) clamp(1rem,5vw,2rem);
-      background:#fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
     }
-    .logo-group { display:flex; flex-direction:column; align-items:center; }
-    .logo { text-transform:uppercase; font-size:clamp(1.5rem,4vw,2rem); font-weight:bold; }
-    .subtitle { font-size:clamp(0.75rem,2vw,0.9rem); color:#666; }
-    nav ul { display:flex; gap:clamp(1rem,3vw,2rem); list-style:none; }
-    nav li a { font-size:clamp(1rem,2vw,1.25rem); color:#333; }
-    nav li a.active, nav li a:hover { color:#f15a24; }
-    .header-phone { font-size:clamp(1rem,2vw,1.25rem); font-weight:bold; color:#000; }
-
-    /* Mobile Header Only Adjustments */
-    @media (max-width:768px) {
-      header { flex-direction:column; align-items:center; text-align:center; }
-      .logo-group { align-items:center; }
-      .subtitle { margin-top:0.25rem; text-align:center; }
-      nav ul { width:100%; justify-content:center; margin-top:0.5rem; }
-      .header-phone { margin-top:clamp(1rem,2vw,2rem); }
+    .logo-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .logo {
+      font-size: 1.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    nav li a {
+      font-size: 1rem;
+      color: #333;
+    }
+    nav li a.active,
+    nav li a:hover {
+      color: #f15a24;
+    }
+    .header-phone {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000;
     }
 
     /* Hero */
     .hero {
-      background:url('https://static.wixstatic.com/media/6468c9_40aab734623041ed9f743b21a5982bff~mv2.jpg')
-                 center/cover no-repeat fixed;
-      margin:0 clamp(1rem,5vw,2rem);
-      height:80vh; min-height:50vh;
-      display:flex; align-items:center; justify-content:center;
-      position:relative;
+      background: url('https://static.wixstatic.com/media/6468c9_40aab734623041ed9f743b21a5982bff~mv2.jpg') center/cover no-repeat fixed;
+      height: 80vh;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 2rem;
+      position: relative;
     }
     .hero-text {
-      position:absolute; bottom:5%; right:5%; color:#fff;
-      text-transform:uppercase; font-size:clamp(1.5rem,5vw,3rem);
-      text-shadow:0 2px 6px rgba(0,0,0,0.6);
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      color: #fff;
+      font-size: 2rem;
+      text-transform: uppercase;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
 
-    /* Intro Section */
+    /* Main Content */
+    .intro-section,
+    .cta-section,
+    .footer-dark {
+      margin: 0 2rem;
+    }
     .intro-section {
-      padding:clamp(2rem,5vw,4rem) clamp(1rem,5vw,2rem);
-      margin-bottom:clamp(0.5rem,1.5vw,1rem);
+      padding: 4rem 0;
     }
     .intro-box {
-      background:#f1f1f1; border-radius:50px;
-      padding:clamp(2rem,4vw,3rem) 0;
-      text-align:center;
+      background: #f1f1f1;
+      border-radius: 50px;
+      padding: 3rem 0;
+      text-align: center;
     }
-    .intro-box h2 { font-size:clamp(1.75rem,4vw,2.5rem); margin-bottom:1rem; }
-    .intro-box p { font-size:clamp(1rem,2.5vw,1.125rem); max-width:800px; margin:0 auto; }
-
-    /* CTA Section */
+    .intro-box h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .intro-box p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.125rem;
+    }
     .cta-section {
-      background:#222; color:#fff; text-align:center;
-      padding:clamp(2rem,5vw,4rem) 0; margin:0 clamp(1rem,5vw,2rem);
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 4rem 0;
     }
-    .cta-section h2 { font-size:clamp(1.75rem,4vw,2.5rem); margin-bottom:clamp(1.5rem,3vw,2rem); }
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
     .btn {
-      display:inline-block;
-      padding:clamp(0.75rem,1.5vw,1rem) clamp(1rem,3vw,1.5rem);
-      margin:clamp(0.5rem,1vw,1rem);
-      background:#fff; color:#222;
-      text-transform:uppercase;
-      border-radius:50px; font-weight:500;
-      font-size:clamp(1rem,2vw,1.125rem);
+      background: #fff;
+      color: #222;
+      padding: 1rem 1.5rem;
+      margin: 1rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+      font-weight: 500;
+      display: inline-block;
+      font-size: 1.125rem;
     }
 
     /* Footer */
     .footer-dark {
-      background:#000; color:#fff;
-      margin:0 clamp(1rem,5vw,2rem);
-      padding:clamp(2rem,5vw,4rem) clamp(1rem,5vw,2rem);
+      background: #000;
+      color: #fff;
+      padding: 4rem 0;
     }
     .footer-contact {
-      display:grid; grid-template-columns:1fr 1.5fr;
-      gap:clamp(1rem,3vw,2rem); align-items:start;
-      padding-bottom:clamp(1rem,2vw,1.5rem);
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 2rem;
+      padding-bottom: 2rem;
     }
     .footer-contact .contact-info h3,
-    .footer-info h3 { color:#fff; }
+    .footer-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
     .footer-contact .contact-info p,
-    .footer-info p { color:#fff; }
-    .map-container { border-radius:12px; overflow:hidden; height:clamp(200px,30vh,300px); }
-    .map-container iframe { width:100%; height:100%; border:0; }
-    .footer-info { text-align:left; width:80%; margin:0 auto; }
-    .footer-dark hr { border:none; border-top:1px solid #444; margin:clamp(1rem,2vw,2rem) 0; }
-    .footer-dark small { display:block; text-align:center; font-size:clamp(0.75rem,1.5vw,0.9rem); }
+    .footer-info p {
+      font-size: 1rem;
+      margin: 0.25rem 0;
+    }
+    .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+      height: 300px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .footer-info {
+      text-align: left;
+      margin-top: 2rem;
+    }
+    .footer-dark hr {
+      border: 0;
+      border-top: 1px solid #444;
+      margin: 2rem 0;
+    }
+    .footer-dark small {
+      display: block;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile Header Only (Contact-US style) */
+    @media (max-width: 768px) {
+      /* Header mobile */
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .logo-group {
+        align-items: center;
+      }
+      .subtitle {
+        margin-top: 0.25rem;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .header-phone {
+        margin-top: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -162,7 +263,7 @@
         <p>hfhangars@gmail.com</p>
       </div>
       <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18...full-iframe-src..." allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.7601677584275!2d-122.12157192413636!3d37.6610958187004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f91008630b533%3A0x4ee9be35c53e25d4!2sHF%20Hangars!5e1!3m2!1sen!2sus!4v1749745169651!5m2!1sen!2sus" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
     <div class="footer-info">

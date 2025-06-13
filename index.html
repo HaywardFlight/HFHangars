@@ -103,7 +103,7 @@
     .hero-text {
       position: absolute;
       bottom: 5%;
-      right: 2%;  /* moved slightly closer to the right edge */
+      right: 5%;  /* moved slightly closer to the right edge */
       color: #fff;
       text-transform: uppercase;
       font-size: clamp(1.5rem, 5vw, 3rem);
@@ -133,14 +133,14 @@
         width: 100%;
         text-align: center;
         margin-top: clamp(0.5rem, 1.5vw, 1rem);
-        font-weight: bold;
+        font-weight: bold; /* ensure bold on mobile */
       }
 
       /* Hero mobile adjustments */
       .hero {
         height: 60vh;
         background-attachment: scroll;
-        background-position: 100% 100%;
+        background-position: right bottom;
       }
 
       /* Footer mobile adjustments */
@@ -210,3 +210,4 @@
   <script src="replace-urls.js"></script>
 </body>
 </html>
+

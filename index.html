@@ -53,7 +53,7 @@
       top: 0;
       z-index: 1000;
     }
-    .logo-group { display: flex; flex-direction: column; align-items: flex-start; }
+    .logo-group { display: flex; flex-direction: column; align-items: center; }
     .logo { text-transform: uppercase; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: bold; }
     .subtitle { font-size: clamp(0.75rem, 2vw, 0.9rem); color: #666; }
     nav ul { display: flex; gap: clamp(1rem, 3vw, 2rem); list-style: none; margin: 0; padding: 0; }
@@ -141,6 +141,7 @@
     .footer-dark hr { border: none; border-top: 1px solid #444; margin: 0 auto; width: 80%; }
     .footer-dark small { display: block; margin-top: 1rem; color: #fff; text-align: center; font-size: clamp(0.75rem, 1.5vw, 0.9rem); }
 
+    /* Mobile Adjustments */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -162,9 +163,8 @@
         text-align: center;
       }
     }
-
   </style>
-<meta name="google-site-verification" content="BadELvxapu_EcQ6QbBKANgSzHvHOoKLmrJR-D1T09rc" /></head>
+</head>
 <body>
   <header>
     <div class="logo-group">
@@ -181,7 +181,6 @@
     <div class="header-phone">(925) 575-1172</div>
   </header>
 
-  <!-- rest of body unchanged -->
   <section class="hero">
     <div class="hero-text">A Hangar That You Can Trust</div>
   </section>

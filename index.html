@@ -6,6 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="BadELvxapu_EcQ6QbBKANgSzHvHOoKLmrJR-D1T09rc" />
+  <!-- Import Poppins font to match Contact Us page -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- 2. Primary SEO meta tags -->
   <title>Home | HF Hangars</title>
@@ -36,22 +38,25 @@
   </script>
 
   <style>
-    /* Preserve original typography and layout resets */
+    /* Preserve typography and layout resets */
     :root { font-size: clamp(0.875rem, 1.5vw, 1.125rem); }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { width: 100%; overflow-x: hidden; }
     body {
       /* offset for fixed header */
       padding-top: clamp(4rem, 6vw, 5rem);
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       line-height: 1.6;
       color: #333;
       background: #fff;
+      overflow-x: hidden;
     }
     a { text-decoration: none; color: inherit; }
 
     /* Header copied from contact-us.html */
     header {
+      line-height: normal;
+      line-height: normal;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -70,35 +75,6 @@
     nav li a { font-size: clamp(1rem, 2vw, 1.25rem); color: #333; }
     nav li a.active, nav li a:hover { color: #f15a24; }
     .header-phone { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: bold; }
-
-    /* Hero */
-    .hero {
-      background: url('https://static.wixstatic.com/media/6468c9_40aab734623041ed9f743b21a5982bff~mv2.jpg/v1/fill/w_1203,h_1218,al_c,q_85,enc_avif,quality_auto/6468c9_40aab734623041ed9f743b21a5982bff~mv2.jpg') center/cover no-repeat fixed;
-      margin: 0 clamp(1rem, 5vw, 2rem);
-      height: 80vh;
-      min-height: 50vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero-text {
-      position: absolute;
-      bottom: 5%;
-      right: 5%;
-      color: #fff;
-      text-transform: uppercase;
-      font-size: clamp(1.5rem, 5vw, 3rem);
-      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    }
-
-    /* Rest of original styles unchanged... */
-    .intro-section { /* ... */ }
-    .cta-section { /* ... */ }
-    .footer-dark { /* ... */ }
-    .footer-contact { /* ... */ }
-    .footer-info { /* ... */ }
-    /* Additional styles omitted for brevity */
   </style>
 </head>
 <body>
@@ -110,7 +86,7 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#" class="active">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="hangar-information.html">Hangar Information</a></li>
         <li><a href="contact-us.html">Contact Us</a></li>
       </ul>
@@ -118,11 +94,9 @@
     <div class="header-phone">(925) 575-1172</div>
   </header>
 
-  <!-- Rest of original body unchanged -->
-  <section class="hero">
+    <section class="hero">
     <div class="hero-text">A Hangar That You Can Trust</div>
   </section>
-  
   <section class="intro-section">
     <div class="intro-box">
       <h2>We'll Take Care of Your Aircraft</h2>
@@ -157,5 +131,7 @@
 
   <script src="config.js"></script>
   <script src="replace-urls.js"></script>
+</body>
+</html>
 </body>
 </html>

@@ -53,9 +53,18 @@
       top: 0;
       z-index: 1000;
     }
-    .logo-group { display: flex; flex-direction: column; align-items: flex-start; }
+
+    .logo-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* keep your logo left-aligned */
+    }
     .logo { text-transform: uppercase; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: bold; }
-    .subtitle { font-size: clamp(0.75rem, 2vw, 0.9rem); color: #666; }
+    .subtitle {
+      /* this centers just the subtitle text under your logo */
+      align-self: center;
+      text-align: center;
+    }
     nav ul { display: flex; gap: clamp(1rem, 3vw, 2rem); list-style: none; margin: 0; padding: 0; }
     nav li a { font-size: clamp(1rem, 2vw, 1.25rem); color: #333; }
     nav li a.active, nav li a:hover { color: #f15a24; }

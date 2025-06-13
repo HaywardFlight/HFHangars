@@ -61,23 +61,50 @@
       z-index: 1000;
     }
 
-    .logo-group { display: flex; flex-direction: column; align-items: flex-start; position: relative; }
-    .logo { text-transform: uppercase; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: bold; }
+    .logo-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .logo {
+      text-transform: uppercase;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: bold;
+    }
     .subtitle {
       font-size: clamp(0.75rem, 2vw, 0.9rem);
       color: #666;
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      width: 100%;
+      text-align: center;
     }
-    nav ul { display: flex; gap: clamp(1rem, 3vw, 2rem); list-style: none; margin: 0; padding: 0; }
-    nav li a { font-size: clamp(1rem, 2vw, 1.25rem); color: #333; }
-    nav li a.active, nav li a:hover { color: #f15a24; }
-    .header-phone { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: bold; color: #000; }
+
+    nav ul {
+      display: flex;
+      gap: clamp(1rem, 3vw, 2rem);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li a {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: #333;
+    }
+    nav li a.active,
+    nav li a:hover {
+      color: #f15a24;
+    }
+    .header-phone {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: bold;
+      color: #000;
+    }
 
     /* Hero */
     .hero {
-      background: url('https://static.wixstatic.com/media/6468c9..._85,enc_avif,quality_auto/6468c9_40aab734623041ed9f743b21a5982bf') no-repeat center/cover;
+      background: url('https://static.wixstatic.com/media/6468c9..._85,enc_avif,quality_auto/6468c9_40aab734623041ed9f743b21a5982bf')
+        no-repeat center/cover;
       height: clamp(300px, 50vh, 600px);
       display: flex;
       justify-content: center;
@@ -86,7 +113,11 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.5);
       margin-bottom: clamp(1rem, 3vw, 2rem);
     }
-    .hero-text { font-size: clamp(2rem, 5vw, 4rem); text-align: center; padding: 0 clamp(1rem, 3vw, 2rem); }
+    .hero-text {
+      font-size: clamp(2rem, 5vw, 4rem);
+      text-align: center;
+      padding: 0 clamp(1rem, 3vw, 2rem);
+    }
 
     /* Content Sections */
     section {
@@ -94,8 +125,13 @@
       max-width: 1200px;
       margin: 0 auto;
     }
-    h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: clamp(0.5rem, 2vw, 1rem); }
-    p { margin-bottom: clamp(1rem, 2vw, 1.5rem); }
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    }
+    p {
+      margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    }
 
     /* Footer */
     footer {
@@ -106,15 +142,55 @@
       grid-template-columns: repeat(3, 1fr);
       gap: clamp(1rem, 2vw, 2rem);
     }
-    .footer-contact { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 2vw, 2rem); }
-    .footer-contact .contact-info h3 { color: #fff; font-size: clamp(1.25rem, 3vw, 1.5rem); margin-bottom: 0.5rem; }
-    .footer-contact .contact-info p { color: #fff; margin: 0.25rem 0; font-size: clamp(0.875rem, 1.5vw, 1rem); }
-    .footer-contact .map-container { border-radius: 12px; overflow: hidden; height: clamp(200px, 30vh, 300px); }
-    .footer-contact .map-container iframe { width: 100%; height: 100%; border: 0; }
-    .footer-info { width: 80%; margin: 0 auto; text-align: left; margin-top: 0; }
-    .footer-info h3, .footer-info p { color: #fff; margin: 0.5rem 0; }
-    .footer-dark hr { border: none; border-top: 1px solid #444; margin: 0 auto; width: 80%; }
-    .footer-dark small { display: block; margin-top: 1rem; color: #aaa; text-align: center; font-size: clamp(0.75rem, 1.5vw, 0.9rem); }
+    .footer-contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(1rem, 2vw, 2rem);
+    }
+    .footer-contact .contact-info h3 {
+      color: #fff;
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      margin-bottom: 0.5rem;
+    }
+    .footer-contact .contact-info p {
+      color: #fff;
+      margin: 0.25rem 0;
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+    }
+    .footer-contact .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+      height: clamp(200px, 30vh, 300px);
+    }
+    .footer-contact .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .footer-info {
+      width: 80%;
+      margin: 0 auto;
+      text-align: left;
+      margin-top: 0;
+    }
+    .footer-info h3,
+    .footer-info p {
+      color: #fff;
+      margin: 0.5rem 0;
+    }
+    .footer-dark hr {
+      border: none;
+      border-top: 1px solid #444;
+      margin: 0 auto;
+      width: 80%;
+    }
+    .footer-dark small {
+      display: block;
+      margin-top: 1rem;
+      color: #aaa;
+      text-align: center;
+      font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    }
   </style>
 </head>
 <body>
@@ -144,15 +220,18 @@
       <div class="contact-info">
         <h3>HF Hangars</h3>
         <p>20995 Skywest Dr,<br>Hayward, CA 94541</p>
+        <p>hfhangars@gmail.com</p>
       </div>
       <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..."></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!... " loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
-    <hr>
     <div class="footer-info">
-      <small>&copy; 2025 HF Hangars. All rights reserved.</small>
+      <h3>HF Hangars</h3>
+      <p>20995 Skywest Dr,<br>Hayward, CA 94541</p>
     </div>
+    <hr>
+    <small>&copy; 2025 HF Hangars. All rights reserved.</small>
   </footer>
 </body>
 </html>

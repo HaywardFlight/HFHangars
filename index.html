@@ -141,35 +141,35 @@
     .footer-dark hr { border: none; border-top: 1px solid #444; margin: 0 auto; width: 80%; }
     .footer-dark small { display: block; margin-top: 1rem; color: #fff; text-align: center; font-size: clamp(0.75rem, 1.5vw, 0.9rem); }
 
-     @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    nav ul {
-      justify-content: center;
-    }
-    .hero {
-      /* keep the smaller mobile height you had */
-      height: 60vh;
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      nav ul {
+        justify-content: center;
+      }
+      .hero {
+        /* keep the smaller mobile height */
+        height: 60vh;
 
-      /* force the background to scroll instead of fixed on mobile */
-      background-attachment: scroll;
+        /* scroll background on mobile */
+        background-attachment: scroll;
 
-      /* shift the image down 20% (first value is horizontal, second is vertical) */
-      background-position: center 20%;
+        /* focus on bottom-right corner */
+        background-position: right bottom;
+      }
+      .footer-contact {
+        grid-template-columns: 1fr;
+      }
+      .footer-info {
+        text-align: center;
+      }
     }
-    .footer-contact {
-      grid-template-columns: 1fr;
-    }
-    .footer-info {
-      text-align: center;
-    }
-  }
 
   </style>
-<meta name="google-site-verification" content="BadELvxapu_EcQ6QbBKANgSzHvHOoKLmrJR-D1T09rc" /></head>
+</head>
 <body>
   <header>
     <div class="logo-group">
@@ -186,7 +186,6 @@
     <div class="header-phone">(925) 575-1172</div>
   </header>
 
-  <!-- rest of body unchanged -->
   <section class="hero">
     <div class="hero-text">A Hangar That You Can Trust</div>
   </section>
@@ -212,7 +211,7 @@
         <p>hfhangars@gmail.com</p>
       </div>
       <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.7601677584275!2d-122.12157192413636!3d37.6610958187004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f91008630b533%3A0x4ee9be35c53e25d4!2sHF%20Hangars!5e1!3m2!1sen!2sus!4v1749745169651!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.7601677584275!2d-122.12157192413636!3d37.6610958187004!2m3!1f0!2f0!3f0!3m2!
       </div>
     </div>
     <div class="footer-info">

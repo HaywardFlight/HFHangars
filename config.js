@@ -9,24 +9,6 @@ const CONFIG = {
         contact: "contact-us.html"
     },
     // Resource URLs
-    resources: {
-        // Wix resources
-        wixBase: "https://static.wixstatic.com/",
-        wixScripts: "https://static.parastorage.com/services/wix-thunderbolt/dist/",
-        wixFonts: "https://static.wixstatic.com/media/",
-        wixImages: "https://static.wixstatic.com/media/",
-        wixFavicon: "https://www.wix.com/favicon.ico",
-        // External resources
-        googleMaps: "https://maps.google.com/maps?q=32.1234,-117.1234&t=m&z=15&output=embed&iwloc=near",
-        // Social media
-        facebook: "https://www.facebook.com/yourpage",
-        twitter: "https://twitter.com/yourhandle",
-        instagram: "https://www.instagram.com/yourhandle",
-        // CDN resources
-        sentry: "https://browser.sentry-cdn.com/7.120.3/",
-        coreJs: "https://static.parastorage.com/unpkg/core-js-bundle@3.2.1/minified.js",
-        focusPolyfill: "https://static.parastorage.com/unpkg/focus-within-polyfill@5.0.9/dist/focus-within-polyfill.js"
-    }
 };
 
 // Function to update all links on the page
@@ -76,10 +58,6 @@ function updatePageLinks() {
         }
     });
 
-    // Update favicon links
-    document.querySelectorAll('link[rel*="icon"]').forEach(link => {
-        link.href = CONFIG.resources.wixFavicon;
-    });
 
     // Update canonical and og:url meta tags
     document.querySelectorAll('link[rel="canonical"], meta[property="og:url"]').forEach(tag => {

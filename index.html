@@ -52,6 +52,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      text-align: left;
     }
     .logo-group { display: flex; flex-direction: column; align-items: flex-start; }
     .logo { text-transform: uppercase; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: bold; }
@@ -147,8 +148,16 @@
         align-items: center;
         text-align: center;
       }
+      .logo-group {
+        align-items: center;
+      }
       nav ul {
         justify-content: center;
+      }
+      .header-phone {
+        width: 100%;
+        text-align: center;
+        margin-top: clamp(0.5rem, 1.5vw, 1rem);
       }
       .hero {
         /* keep the smaller mobile height */

@@ -94,13 +94,14 @@
 
     /* Hero */
     .hero {
-      background: url('https://static.wixstatic.com/media/6468c9_40aab734623041ed9f743b21a5982bff~mv2.jpg') right bottom / cover no-repeat scroll;
+      background: url('https://static.wixstatic.com/media/6468c9_40aab734623041ed9f743b21a5982bff~mv2.jpg') right bottom / cover no-repeat;
       margin: 0 clamp(1rem, 5vw, 2rem);
       height: 80vh;
       min-height: 50vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
     .hero-text {
       position: absolute;
@@ -113,69 +114,29 @@
     }
 
     /* Sections */
-    .intro-section {
-      padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem);
-      margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
-    }
-    .intro-box {
-      background: #f1f1f1;
-      border-radius: 50px;
-      padding: clamp(2rem, 4vw, 3rem) 0;
-      text-align: center;
-    }
-    .cta-section {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      margin: 0 clamp(1rem, 5vw, 2rem);
-      padding: clamp(2rem, 5vw, 4rem) 0;
-    }
-    .btn {
-      display: inline-block;
-      padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1rem, 3vw, 1.5rem);
-      margin: clamp(0.5rem, 1vw, 1rem);
-      background: #fff;
-      color: #222;
-      text-transform: uppercase;
-      border-radius: 50px;
-      font-weight: 500;
-      font-size: clamp(1rem, 2vw, 1.125rem);
-    }
+    .intro-section { padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem); margin-bottom: clamp(0.5rem,1.5vw,1rem); }
+    .intro-box { background: #f1f1f1; border-radius: 50px; padding: clamp(2rem,4vw,3rem) 0; text-align: center; }
+    .cta-section { background: #222; color: #fff; text-align: center; padding: clamp(2rem,5vw,4rem) 0; }
+    .btn { display: inline-block; padding: clamp(0.75rem,1.5vw,1rem) clamp(1rem,3vw,1.5rem); margin: clamp(0.5rem,1vw,1rem); background: #fff; color: #222; text-transform: uppercase; border-radius: 50px; font-weight: 500; font-size: clamp(1rem,2vw,1.125rem); }
 
     /* Footer */
-    .footer-dark {
-      background: #000;
-      margin: 0 clamp(1rem, 5vw, 2rem);
-      padding: clamp(2rem, 5vw, 4rem) 0;
-    }
-    .footer-contact {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: clamp(1rem, 3vw, 2rem);
-      align-items: start;
-      width: 80%;
-      margin: 0 auto;
-      padding-bottom: clamp(1rem, 2vw, 1.5rem);
-    }
-    .footer-info { text-align: left; width: 80%; margin: 0 auto; }
-    .footer-contact .contact-info h3,
-    .footer-info h3 { color: #fff; }
-    .footer-contact .contact-info p,
-    .footer-info p { color: #fff; }
-    .footer-dark hr { border: none; border-top: 1px solid #444; margin: 0 auto; width: 80%; }
-    .footer-dark small { display: block; margin-top: 1rem; color: #fff; text-align: center; font-size: clamp(0.75rem, 1.5vw, 0.9rem); }
+    .footer-dark { background: #000; padding: clamp(2rem,5vw,4rem) clamp(1rem,5vw,2rem); color: #fff; }
+    .footer-contact { display: grid; grid-template-columns: 1fr 1.5fr; gap: clamp(1rem,3vw,2rem); align-items: start; padding-bottom: clamp(1rem,2vw,1.5rem); margin-bottom: clamp(1rem,2vw,2rem); }
+    .footer-contact .contact-info h3 { margin-bottom: 0.5rem; }
+    .footer-contact .contact-info p { margin: 0.25rem 0; }
+    .footer-info { text-align: left; }
+    .footer-dark hr { border: none; border-top: 1px solid #444; margin: clamp(1rem,2vw,2rem) 0; }
+    .footer-dark small { display: block; text-align: center; font-size: clamp(0.75rem,1.5vw,0.9rem); }
 
     /* Mobile Adjustments */
     @media (max-width: 768px) {
-      /* Header */
       header { flex-direction: column; align-items: center; text-align: center; }
       .logo-group { align-items: center; }
-      nav ul { width: 100%; justify-content: center; }
-      .header-phone { margin-top: clamp(1rem, 2vw, 2rem); }
-      /* Hero repositioned */
-      .hero { height: 60vh; }
-      /* Footer */
-      .footer-contact { grid-template-columns: 1fr; }
+      .subtitle { text-align: center; margin-top: 0.25rem; }
+      nav ul { width: 100%; justify-content: center; margin-top: 0.5rem; }
+      .header-phone { margin-top: clamp(1rem,2vw,2rem); }
+      .hero { height: 60vh; background-position: right bottom; }
+      .footer-contact { grid-template-columns: 1fr; text-align: center; }
       .footer-info { text-align: center; }
     }
   </style>
@@ -216,23 +177,8 @@
   <footer class="footer-dark">
     <div class="footer-contact">
       <div class="contact-info">
-        <h3>Contact us</h3>
+        <h3>Contact Us</h3>
         <p>Tel: (925) 575-1172</p>
         <p>hfhangars@gmail.com</p>
       </div>
       <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.7601677584275!2d-122.12157192413636!3d37.6610958187004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f91008630b533%3A0x4ee9be35c53e25d4!2sHF%20Hangars!5e1!3m2!1sen!2sus!4v1749745169651!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-    <div class="footer-info">
-      <h3>HF Hangars</h3>
-      <p>20995 Skywest Dr,<br>Hayward, CA 94541</p>
-    </div>
-    <hr>
-    <small>&copy; 2025 HF Hangars. All rights reserved.</small>
-  </footer>
-
-  <script src="config.js"></script>
-  <script src="replace-urls.js"></script>
-</body>
-</html>

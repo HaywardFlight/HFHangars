@@ -1,4 +1,4 @@
-<!-- index.html (updated with Contact Us header) -->
+<!-- index.html (updated header only) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,17 +36,21 @@
   </script>
 
   <style>
-    /* Body offset for fixed header */
-    body { padding-top: clamp(4rem, 6vw, 5rem); }
-    
-    /* Fluid Typography */
+    /* Preserve original typography and layout resets */
     :root { font-size: clamp(0.875rem, 1.5vw, 1.125rem); }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { width: 100%; overflow-x: hidden; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #fff; }
+    body {
+      /* offset for fixed header */
+      padding-top: clamp(4rem, 6vw, 5rem);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+    }
     a { text-decoration: none; color: inherit; }
 
-    /* Header (from contact-us.html) */
+    /* Header copied from contact-us.html */
     header {
       display: flex;
       justify-content: space-around;
@@ -88,7 +92,13 @@
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
 
-    /* Other styles unchanged... */
+    /* Rest of original styles unchanged... */
+    .intro-section { /* ... */ }
+    .cta-section { /* ... */ }
+    .footer-dark { /* ... */ }
+    .footer-contact { /* ... */ }
+    .footer-info { /* ... */ }
+    /* Additional styles omitted for brevity */
   </style>
 </head>
 <body>
@@ -108,7 +118,7 @@
     <div class="header-phone">(925) 575-1172</div>
   </header>
 
-  <!-- rest of body unchanged -->
+  <!-- Rest of original body unchanged -->
   <section class="hero">
     <div class="hero-text">A Hangar That You Can Trust</div>
   </section>

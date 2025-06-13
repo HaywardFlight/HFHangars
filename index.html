@@ -142,12 +142,32 @@
     .footer-dark small { display: block; margin-top: 1rem; color: #fff; text-align: center; font-size: clamp(0.75rem, 1.5vw, 0.9rem); }
 
     @media (max-width: 768px) {
-      header { flex-direction: column; align-items: center; text-align: center; }
-      nav ul { justify-content: center; }
-      .hero { height: 60vh; }
-      .footer-contact { grid-template-columns: 1fr; }
-      .footer-info { text-align: center; }
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
+    nav ul {
+      justify-content: center;
+    }
+    .hero {
+      /* keep the smaller mobile height you had */
+      height: 60vh;
+
+      /* force the background to scroll instead of fixed on mobile */
+      background-attachment: scroll;
+
+      /* shift the image down 20% (first value is horizontal, second is vertical) */
+      background-position: center 20%;
+    }
+    .footer-contact {
+      grid-template-columns: 1fr;
+    }
+    .footer-info {
+      text-align: center;
+    }
+  }
+
   </style>
 <meta name="google-site-verification" content="BadELvxapu_EcQ6QbBKANgSzHvHOoKLmrJR-D1T09rc" /></head>
 <body>

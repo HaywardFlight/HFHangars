@@ -5,13 +5,16 @@
   <!-- 1. Charset & viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="BadELvxapu_EcQ6QbBKANgSzHvHOoKLmrJR-D1T09rc" />
+  <meta name="google-site-verification" content="BadELvxapu_EcQ6bBKANgSzHvHOoKLmrJR-D1T09rc" />
 
   <!-- 2. Primary SEO meta tags -->
   <title>Home | HF Hangars</title>
   <meta name="description" content="Welcome to HF Hangars, where we provide secure and reliable storage, routine maintenance services, and top-notch service for your aircraft.">
   <meta name="keywords" content="aircraft storage, hangar rental, Hayward CA, private hangars">
   <link rel="canonical" href="https://www.hfhangars.com/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
   <!-- 3. Open Graph tags -->
   <meta property="og:title" content="Home | HF Hangars">
@@ -143,38 +146,13 @@
     .footer-dark small { display: block; margin-top: 1rem; color: #fff; text-align: center; font-size: clamp(0.75rem, 1.5vw, 0.9rem); }
 
     @media only screen and (max-width: 600px) {
-      .logo-group {
-        align-items: center;
-      }
-      nav ul {
-        width: 100%;
-        justify-content: center;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      nav ul {
-        justify-content: center;
-      }
-      .hero {
-        /* keep the smaller mobile height */
-        height: 60vh;
-
-        /* scroll background on mobile */
-        background-attachment: scroll;
-
-        /* focus on bottom-right corner */
-        background-position: right bottom;
-      }
-      .footer-contact {
-        grid-template-columns: 1fr;
-      }
-      .footer-info {
-        text-align: center;
-      }
+      .logo-group { align-items: center; }
+      nav ul { width: 100%; justify-content: center; }
+      header { flex-direction: column; align-items: center; text-align: center; }
+      nav ul { justify-content: center; }
+      .hero { height: 60vh; background-attachment: scroll; background-position: right bottom; }
+      .footer-contact { grid-template-columns: 1fr; }
+      .footer-info { text-align: center; }
     }
 
   </style>

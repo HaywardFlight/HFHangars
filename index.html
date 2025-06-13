@@ -1,196 +1,238 @@
-<!-- index.html restored -->
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Med Environments</title>
-  <link rel="stylesheet" href="/style.css" />
+  <!-- 1. Charset & viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 2. Primary SEO meta tags -->
+  <title>Home | HF Hangars</title>
+  <meta name="description" content="Welcome to HF Hangars, where we provide secure and reliable storage, routine maintenance services, and top-notch service for your aircraft.">
+  <meta name="keywords" content="aircraft storage, hangar rental, Hayward CA, private hangars">
+  <link rel="canonical" href="https://www.hfhangars.com/">
+
+  <!-- 3. Open Graph tags -->
+  <meta property="og:title" content="Home | HF Hangars">
+  <meta property="og:description" content="Welcome to HF Hangars, where we provide secure and reliable storage, routine maintenance services, and top-notch service for your aircraft.">
+  <meta property="og:url" content="https://www.hfhangars.com/">
+  <meta property="og:image" content="https://www.hfhangars.com/assets/images/og-image.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- 5. JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HF Hangars",
+    "url": "https://www.hfhangars.com",
+    "logo": "https://www.hfhangars.com/assets/images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/YourPage",
+      "https://twitter.com/YourProfile"
+    ]
+  }
+  </script>
+
   <style>
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* Base Reset & Typography */
+    :root { font-size: clamp(0.875rem, 1.5vw, 1.125rem); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; overflow-x: hidden; }
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background: #fff;
+      /* offset for fixed header */
+      padding-top: clamp(4rem, 6vw, 5rem);
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: clamp(0.5rem, 2vw, 1.5rem) clamp(1rem, 5vw, 2rem);
+      background: #fff;
+      z-index: 1000;
+    }
+    .logo-group {
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      align-items: flex-start;
     }
-    header {
-      background: #333;
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .logo {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: bold;
+    }
+    .subtitle {
+      font-size: clamp(0.75rem, 2vw, 0.9rem);
+      color: #666;
     }
     nav ul {
-      list-style: none;
       display: flex;
+      gap: clamp(1rem, 3vw, 2rem);
+      list-style: none;
     }
-    nav ul li {
-      margin-left: 20px;
+    nav li a {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: #333;
     }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
+    nav li a.active,
+    nav li a:hover { color: #f15a24; }
+    .header-phone {
+      font-size: clamp(1rem, 2vw, 1.25rem);
       font-weight: bold;
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
-      background-image: url('https://images.pexels.com/photos/15286/pexels-photo.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      background: url('https://static.wixstatic.com/media/6468c9_40aab734623041ed9f743b21a5982bff~mv2.jpg') right bottom / cover no-repeat scroll;
+      margin: 0 clamp(1rem, 5vw, 2rem);
       height: 80vh;
+      min-height: 50vh;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+    }
+    .hero-text {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
       color: #fff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      font-size: 2rem;
+      text-transform: uppercase;
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
 
-    /* Main Content */
-    main {
-      flex: 1;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+    /* Sections */
+    .intro-section {
+      padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem);
+      margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
     }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .intro-box {
+      background: #f1f1f1;
+      border-radius: 50px;
+      padding: clamp(2rem, 4vw, 3rem) 0;
+      text-align: center;
     }
-    .service-card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .cta-section {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      margin: 0 clamp(1rem, 5vw, 2rem);
+      padding: clamp(2rem, 5vw, 4rem) 0;
     }
-    .service-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .service-card-content {
-      padding: 20px;
-    }
-    .service-card-content h3 {
-      margin-bottom: 10px;
-      color: #333;
-    }
-    .service-card-content p {
-      color: #666;
+    .btn {
+      display: inline-block;
+      padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1rem, 3vw, 1.5rem);
+      margin: clamp(0.5rem, 1vw, 1rem);
+      background: #fff;
+      color: #222;
+      text-transform: uppercase;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: clamp(1rem, 2vw, 1.125rem);
     }
 
     /* Footer */
-    footer {
-      background: #f4f4f4;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+    .footer-dark {
+      background: #000;
+      margin: 0 clamp(1rem, 5vw, 2rem);
+      padding: clamp(2rem, 5vw, 4rem) 0;
     }
     .footer-contact {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1.5fr;
+      gap: clamp(1rem, 3vw, 2rem);
+      align-items: start;
+      width: 80%;
+      margin: 0 auto;
+      padding-bottom: clamp(1rem, 2vw, 1.5rem);
     }
-    .footer-info {
-      text-align: right;
-    }
+    .footer-info { text-align: left; width: 80%; margin: 0 auto; }
+    .footer-contact .contact-info h3,
+    .footer-info h3 { color: #fff; }
+    .footer-contact .contact-info p,
+    .footer-info p { color: #fff; }
+    .footer-dark hr { border: none; border-top: 1px solid #444; margin: 0 auto; width: 80%; }
+    .footer-dark small { display: block; margin-top: 1rem; color: #fff; text-align: center; font-size: clamp(0.75rem, 1.5vw, 0.9rem); }
 
-    /* Responsive Styles */
+    /* Mobile Adjustments */
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      nav ul {
-        flex-direction: column;
-      }
-      nav ul li {
-        margin: 10px 0;
-      }
-      .hero {
-        height: 60vh;
-        background-attachment: scroll;
-        background-position: right bottom;
-      }
-      .footer-contact {
-        grid-template-columns: 1fr;
-      }
-      .footer-info {
-        text-align: center;
-      }
+      /* Header */
+      header { flex-direction: column; align-items: center; text-align: center; }
+      .logo-group { align-items: center; }
+      nav ul { width: 100%; justify-content: center; }
+      .header-phone { margin-top: clamp(1rem, 2vw, 2rem); }
+      /* Hero repositioned */
+      .hero { height: 60vh; }
+      /* Footer */
+      .footer-contact { grid-template-columns: 1fr; }
+      .footer-info { text-align: center; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Med Environments</h1>
+    <div class="logo-group">
+      <div class="logo">HF Hangars</div>
+      <div class="subtitle">Private Aircraft Hangars</div>
+    </div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="hangar-information.html">Hangar Information</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
       </ul>
     </nav>
+    <div class="header-phone">(925) 575-1172</div>
   </header>
+
   <section class="hero">
-    <div>
-      <h2>Creating Sustainable Spaces</h2>
-      <p>Designing environments for a greener future</p>
+    <div class="hero-text">A Hangar That You Can Trust</div>
+  </section>
+
+  <section class="intro-section">
+    <div class="intro-box">
+      <h2>We'll Take Care of Your Aircraft</h2>
+      <p>Welcome to HF Hangars, where we provide secure and reliable aircraft storage and professional maintenance services. Our hangar is the perfect place for you to protect and maintain your valuable aircraft. We offer competitive rates and ensure top-notch service for all your aircraft needs.</p>
     </div>
   </section>
-  <main>
-    <section id="services" class="services">
-      <div class="service-card">
-        <img src="https://images.pexels.com/photos/1231234/architecture.jpg" alt="Architecture Service">
-        <div class="service-card-content">
-          <h3>Architecture</h3>
-          <p>Innovative building designs that integrate seamlessly with the environment.</p>
-        </div>
+
+  <section class="cta-section">
+    <h2>Interested in Renting a Hangar Space?</h2>
+    <a href="hangar-information.html" class="btn">Hangar Information</a>
+    <a href="contact-us.html" class="btn">Contact Us</a>
+  </section>
+
+  <footer class="footer-dark">
+    <div class="footer-contact">
+      <div class="contact-info">
+        <h3>Contact us</h3>
+        <p>Tel: (925) 575-1172</p>
+        <p>hfhangars@gmail.com</p>
       </div>
-      <div class="service-card">
-        <img src="https://images.pexels.com/photos/2342345/landscape.jpg" alt="Landscape Service">
-        <div class="service-card-content">
-          <h3>Landscaping</h3>
-          <p>Transforming outdoor spaces into lush, sustainable landscapes.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="https://images.pexels.com/photos/3453456/interior.jpg" alt="Interior Service">
-        <div class="service-card-content">
-          <h3>Interior Design</h3>
-          <p>Functional and aesthetic interior solutions for residential and commercial spaces.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="footer-contact" id="contact">
-      <div>
-        <h4>Email</h4>
-        <p>info@medenvironments.com</p>
-      </div>
-      <div>
-        <h4>Phone</h4>
-        <p>+1 (555) 123-4567</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.7601677584275!2d-122.12157192413636!3d37.6610958187004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f91008630b533%3A0x4ee9be35c53e25d4!2sHF%20Hangars!5e1!3m2!1sen!2sus!4v1749745169651!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
     <div class="footer-info">
-      <p>&copy; 2025 Med Environments. All rights reserved.</p>
+      <h3>HF Hangars</h3>
+      <p>20995 Skywest Dr,<br>Hayward, CA 94541</p>
     </div>
+    <hr>
+    <small>&copy; 2025 HF Hangars. All rights reserved.</small>
   </footer>
+
+  <script src="config.js"></script>
+  <script src="replace-urls.js"></script>
 </body>
 </html>

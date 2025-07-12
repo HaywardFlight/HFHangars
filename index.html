@@ -67,14 +67,14 @@
 
     /* Hero */
     .hero {
-      /* Separating background properties for clarity and easier adjustments */
       background-image: url('https://static.wixstatic.com/media/6468c9_cea2dc5fdfad4268b0610bbf462f5528~mv2.jpg/v1/fill/w_3840,h_1808,al_c,q_90,enc_avif,quality_auto/6468c9_cea2dc5fdfad4268b0610bbf462f5528~mv2.jpg');
-      background-position: center center; /* Ensures the image is centered */
-      background-size: cover; /* This makes the image cover the entire element, cropping if necessary */
-      background-repeat: no-repeat; /* Prevents the image from repeating */
-      background-attachment: fixed; /* Keeps the background image fixed when scrolling */
+      background-size: cover; /* Ensures the image covers the entire area */
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* For the parallax effect */
     
-      /* Your existing layout properties */
+      /* Default background position for larger screens */
+      background-position: center center;
+    
       margin: 0 clamp(1rem, 5vw, 2rem);
       height: 80vh;
       min-height: 50vh;
@@ -82,6 +82,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    
+    /* Media query for smaller screens (e.g., typical mobile portrait) */
+    @media (max-width: 768px) {
+      .hero {
+        /* On smaller screens, prioritize the center of the image, 
+           or consider a specific vertical position if the main subject
+           is not perfectly centered vertically (e.g., '50% 20%' or 'center top').
+           'center' alone is shorthand for 'center center'. */
+        background-position: center; 
+        
+        /* You might also slightly reduce height on mobile if the cropping is severe */
+        /* height: 60vh; */
+      }
     }
     .hero-text {
       position: absolute;

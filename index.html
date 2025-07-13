@@ -149,9 +149,11 @@
     .footer-dark small { display: block; margin-top: 1rem; color: #fff; text-align: center; font-size: clamp(0.75rem, 1.5vw, 0.9rem); }
 
     @media only screen and (max-width: 600px) {
-      .logo-group { align-items: center; }
+      .logo-group { align-items: center; order: 1;}
       nav ul { width: 100%; justify-content: center; }
       header { flex-direction: column-reverse; align-items: center; text-align: center; }
+      .header-phone { order: 2; margin-bottom: 0.5rem; }
+      nav { order: 3; }
       nav ul { justify-content: center; }
       .hero { height: 30vh; background-attachment: scroll; background-position: 30% 90%; }
       .hero-text {
